@@ -10,6 +10,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.taobao.toolbarwithdrawertest.fragments.Fragment1;
@@ -29,7 +30,6 @@ public class MainActivity extends ActionBarActivity implements ViewPager.OnPageC
     private ActionBarDrawerToggle mDrawerToggle;
     private ViewPager mViewPager;
     private PagerSlidingTabStrip mTabs;
-
 
     private List<Fragment> fragments = new ArrayList<>();
     private static final String[] TITLE = {"卡片1","卡片2","卡片3"};
@@ -52,7 +52,22 @@ public class MainActivity extends ActionBarActivity implements ViewPager.OnPageC
         setSupportActionBar(mToolBar);
 
         //初始化toggle,注意toggle要用v7包的
-        mDrawerToggle = new ActionBarDrawerToggle(this,mDrawer,mToolBar,R.string.drawer_open,R.string.drawer_close);
+        mDrawerToggle = new ActionBarDrawerToggle(this,mDrawer,mToolBar,R.string.drawer_open,R.string.drawer_close)
+        {
+            @Override
+            public void onDrawerClosed(View drawerView)
+            {
+                super.onDrawerClosed(drawerView);
+                getSupportActionBar().setTitle("知乎");
+            }
+
+            @Override
+            public void onDrawerOpened(View drawerView)
+            {
+                super.onDrawerOpened(drawerView);
+                getSupportActionBar().setTitle("设置");
+            }
+        };
         mDrawerToggle.syncState();
         //设置toogle
         mDrawer.setDrawerListener(mDrawerToggle);

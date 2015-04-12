@@ -7,15 +7,12 @@
 
     <!--
       1.安卓theme 以及 style作用
-      //2.toolbar样式
-     // 3.toolbar结合toggle
+
+
       4.searchView
 
 
-      用Theme.AppCompat.NoActionBar 时searchView和字体都是白色的，而Theme.AppCompat.Light.NoActionBa是黑色的
 
-      http://www.cnblogs.com/summerpxy/archive/2013/06/08/3125838.html
-      http://blog.csdn.net/dreamintheworld/article/details/39314121
     -->
 
     <include
