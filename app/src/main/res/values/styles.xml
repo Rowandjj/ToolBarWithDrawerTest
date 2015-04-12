@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--控制tool bar背景色-->
+        <item name="colorPrimary">#4876FF</item>
+         <!--控制标题栏背景色 5.0-->
+        <item name="colorPrimaryDark">#3A5FCD</item>
+        <!--控制主窗体背景色-->
+        <item name="android:windowBackground">@color/window_background</item>
+        <!--控制标题颜色  主题默认就是白色-->
+        <!--<item name="android:textColorPrimary">#ff0000</item>-->
+    </style>
+</resources>

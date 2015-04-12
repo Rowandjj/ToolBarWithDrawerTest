@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:tab="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+    <!--
+      1.安卓theme 以及 style作用
+      //2.toolbar样式
+     // 3.toolbar结合toggle
+      4.searchView
+
+
+      用Theme.AppCompat.NoActionBar 时searchView和字体都是白色的，而Theme.AppCompat.Light.NoActionBa是黑色的
+
+      http://www.cnblogs.com/summerpxy/archive/2013/06/08/3125838.html
+      http://blog.csdn.net/dreamintheworld/article/details/39314121
+    -->
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"
+        ></include>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.astuetz.PagerSlidingTabStrip
+                android:id="@+id/tabs"
+                android:textSize="17sp"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                tab:pstsTextColorSelected="#fff"
+                android:textColor="#000"
+                tab:pstsShouldExpand="true"
+                />
+            <!-- tab:pstsShouldExpand 是否能够扩展,设置为true时，每个tab占据相同的宽度 -->
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ></android.support.v4.view.ViewPager>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="首页"
+                android:textColor="#000"
+                android:textSize="19sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#33000000"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="发现"
+                android:textColor="#000"
+                android:textSize="19sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#33000000"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="?attr/colorPrimary"
+                android:gravity="center"
+                android:text="关注"
+                android:textColor="#000"
+                android:textSize="19sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#33000000"></View>
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>
