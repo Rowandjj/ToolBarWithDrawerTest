@@ -6,4 +6,4 @@ this is a demo.
 
 #look
 
-![](https://github.com/Rowandjj/ToolBarWithDrawerTest/blob/master/art/demo5.gif)
+![](https://github.com/Rowandjj/ToolBarWithDrawerTest/blob/master/art/demo6.gif)
