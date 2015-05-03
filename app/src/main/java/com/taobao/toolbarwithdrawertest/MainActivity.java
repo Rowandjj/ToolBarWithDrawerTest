@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -24,7 +23,7 @@ import java.util.List;
 import static com.taobao.toolbarwithdrawertest.R.id.app_bar;
 
 
-public class MainActivity extends ActionBarActivity implements ViewPager.OnPageChangeListener
+public class MainActivity extends BaseActivity implements ViewPager.OnPageChangeListener
 {
     private Toolbar mToolBar;
     private DrawerLayout mDrawer;
@@ -51,6 +50,7 @@ public class MainActivity extends ActionBarActivity implements ViewPager.OnPageC
 //        mToolBar.setTitle("知乎");
         //将ToolBar当做ActionBar使用
         setSupportActionBar(mToolBar);
+        setStatusBarColor(mToolBar);
 
         //初始化toggle,注意toggle要用v7包的
         mDrawerToggle = new ActionBarDrawerToggle(this,mDrawer,mToolBar,R.string.drawer_open,R.string.drawer_close)

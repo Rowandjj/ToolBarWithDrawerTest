@@ -1,14 +1,15 @@
 package com.taobao.toolbarwithdrawertest;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 
-public class SearchActivity extends ActionBarActivity
+public class SearchActivity extends BaseActivity
 {
+
+    private SearchView mSearchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -19,10 +20,12 @@ public class SearchActivity extends ActionBarActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        setStatusBarColor(toolbar);
 
-        SearchView s = (SearchView) findViewById(R.id.search);
+        mSearchView = (SearchView) findViewById(R.id.search);
         //让searchview默认展开
-        s.onActionViewExpanded();
+        mSearchView.onActionViewExpanded();
+        mSearchView.setFocusableInTouchMode(true);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener()
         {
@@ -32,6 +35,5 @@ public class SearchActivity extends ActionBarActivity
                 SearchActivity.this.finish();
             }
         });
-
     }
 }
