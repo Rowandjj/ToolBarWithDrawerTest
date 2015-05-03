@@ -1,5 +1,6 @@
 package com.taobao.toolbarwithdrawertest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -113,13 +114,18 @@ public class MainActivity extends ActionBarActivity implements ViewPager.OnPageC
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
+        switch (item.getItemId())
+        {
+            case R.id.action_search:
+                startActivity(new Intent(this,SearchActivity.class));
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels)
     {
-
     }
 
     @Override

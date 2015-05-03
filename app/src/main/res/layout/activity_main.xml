@@ -5,15 +5,6 @@
                 android:layout_height="match_parent"
                 tools:context=".MainActivity">
 
-    <!--
-      1.安卓theme 以及 style作用
-
-
-      4.searchView
-
-
-
-    -->
 
     <include
         android:id="@+id/app_bar"
@@ -52,7 +43,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="#fff"
@@ -62,7 +53,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="#fff"
-                android:gravity="center"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
                 android:text="首页"
                 android:textColor="#000"
                 android:textSize="19sp"/>
@@ -76,7 +68,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="#fff"
-                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
                 android:text="发现"
                 android:textColor="#000"
                 android:textSize="19sp"/>
@@ -90,8 +83,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="?attr/colorPrimary"
-                android:gravity="center"
+                android:gravity="center_vertical"
                 android:text="关注"
+                android:paddingLeft="10dp"
                 android:textColor="#000"
                 android:textSize="19sp"/>
 
